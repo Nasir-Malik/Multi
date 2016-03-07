@@ -1,0 +1,26 @@
+{
+  "name": "multi",
+  "description": "Test project for Mean Stack",
+  "main": "index.js",
+  "authors": [
+    "nasir.niaz@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Nasir-Malik/Multi",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "toastr": "^2.1.2",
+    "angular": "^1.5.0",
+    "angular-resource": "^1.5.0",
+    "angular-route": "^1.5.0"
+  }
+}

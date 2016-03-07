@@ -1,0 +1,23 @@
+{
+  "name": "multi",
+  "version": "1.0.0",
+  "description": "Test project for Mean Stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nasir-Malik/Multi.git"
+  },
+  "author": "nasir.niaz@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nasir-Malik/Multi/issues"
+  },
+  "homepage": "https://github.com/Nasir-Malik/Multi#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "jade": "^1.11.0"
+  }
+}
