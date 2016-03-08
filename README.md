@@ -20,3 +20,6 @@
 
 - npm install stylus morgan body-parser --save
 - npm install mongoose --save
+
+- use multi
+- db.messages.insert({message: 'Hello From Mongo to MEAN'})
