@@ -15,3 +15,7 @@
 - bower install toastr --save
 - bower install angular angular-resource angular-route --save
 
+- npm install nodemon -g
+- nodemon server.js (instead of node server.js)
+
+- npm install stylus morgan body-parser --save
