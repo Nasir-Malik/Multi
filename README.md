@@ -19,3 +19,4 @@
 - nodemon server.js (instead of node server.js)
 
 - npm install stylus morgan body-parser --save
+- npm install mongoose --save

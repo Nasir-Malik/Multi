@@ -1,7 +1,8 @@
 var express = require("express")
 	stylus = require("stylus"),
 	logger = require('morgan'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser'),
+	mongoose = require('mongoose');
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 var app = express();
@@ -22,11 +23,27 @@ app.use(stylus.middleware({
 }));
 app.use(express.static(__dirname + "/public"));
 
+mongoose.connect('mongodb://localhost/multi');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Error Connecting db...'));
+db.once('open', function callback(){
+	console.log('Connection successful...');
+});
+
+var messageSchema = mongoose.Schema({message: String});
+var Message = mongoose.model('Message', messageSchema);
+var mongoMesage;
+Message.findOne().exec(function(err, messageDoc){
+	mongoMesage = messageDoc.message;
+});
+
 app.get("/partials/:partialName", function(req, res){
 	res.render("partials/" + req.params.partialName);
 })
 app.get("*", function(req, res){
-	res.render("index");
+	res.render("index", {
+		mongoMessage: mongoMesage
+	});
 })
 
 var port = 3030;
